@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple & Scientific Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="calculator-container">
+        <h2>UL Calculator</h2>
+        <!-- Display Screen -->
+        <input type="text" id="display" disabled placeholder="0">
+        
+        <!-- Buttons Grid -->
+        <div class="buttons">
+            <!-- Scientific Row 1 -->
+            <button class="btn-sci" onclick="calcScientific('sin')">sin</button>
+            <button class="btn-sci" onclick="calcScientific('cos')">cos</button>
+            <button class="btn-sci" onclick="calcScientific('tan')">tan</button>
+            <button class="btn-sci" onclick="calcScientific('log')">log</button>
+
+            <!-- Scientific Row 2 & Clear/Delete -->
+            <button class="btn-sci" onclick="calcScientific('sqrt')">√</button>
+            <button class="btn-sci" onclick="calcScientific('square')">x²</button>
+            <button class="btn-operator" onclick="clearDisplay()">C</button>
+            <button class="btn-operator" onclick="deleteLast()">DEL</button>
+
+            <!-- Number Row 1 -->
+            <button class="btn-num" onclick="appendValue('7')">7</button>
+            <button class="btn-num" onclick="appendValue('8')">8</button>
+            <button class="btn-num" onclick="appendValue('9')">9</button>
+            <button class="btn-operator" onclick="appendValue('/')">÷</button>
+
+            <!-- Number Row 2 -->
+            <button class="btn-num" onclick="appendValue('4')">4</button>
+            <button class="btn-num" onclick="appendValue('5')">5</button>
+            <button class="btn-num" onclick="appendValue('6')">6</button>
+            <button class="btn-operator" onclick="appendValue('*')">×</button>
+
+            <!-- Number Row 3 -->
+            <button class="btn-num" onclick="appendValue('1')">1</button>
+            <button class="btn-num" onclick="appendValue('2')">2</button>
+            <button class="btn-num" onclick="appendValue('3')">3</button>
+            <button class="btn-operator" onclick="appendValue('-')">-</button>
+
+            <!-- Number Row 4 -->
+            <button class="btn-num" onclick="appendValue('.')">.</button>
+            <button class="btn-num" onclick="appendValue('0')">0</button>
+            <button class="btn-equal" onclick="calculateResult()">=</button>
+            <button class="btn-operator" onclick="appendValue('+')">+</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
